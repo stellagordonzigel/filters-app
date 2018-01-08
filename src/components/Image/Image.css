@@ -1,3 +1,7 @@
-.test-image {
-  height: 250px;
+#images {
+  width: 500px;
+}
+
+img {
+  width: 100%
 }

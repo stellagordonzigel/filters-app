@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './FilterContainer.css'
+import $ from 'jquery'
 
 let filters = [
   {
@@ -23,16 +24,31 @@ class FilterContainer extends Component {
   constructor (props) {
   super(props)
     this.state = {
-      filters: filters
+      filters: filters,
+      buttonClicked: false,
+      filterChoice: ''
     }
   }
 
-  render() {
+  onClickFilter (e) {
+    e.preventDefault()
+    this.setState({
+      buttonClicked: true,
+      filterChoice: e.target.name
+    }, () => {
+      let filter = this.state.filterChoice.toLowerCase()
+      $('#images')[0].className=''
+      $('#images')[0].className= filter
+    })
+  }
 
+  render() {
     let allFilters = this.state.filters.map((filter, index) => {
       return (
-        <div>
-          <p className='individual-filters'>{filter.name}</p>
+        <div key={index}>
+            <button className='individual-filters' name={filter.name} onClick={e => this.onClickFilter(e)}>
+              {filter.name}
+            </button>
         </div>
       )
     })
