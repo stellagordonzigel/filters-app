@@ -8,7 +8,7 @@ import './App.css';
 import FilterContainer from '../FilterContainer/FilterContainer'
 import Image from '../Image/Image'
 // import ShareFacebook from '../ShareFacebook/ShareFacebook'
-// import Upload from '../Upload/Upload'
+import Upload from '../Upload/Upload'
 
 class App extends Component {
   render() {
@@ -22,6 +22,10 @@ class App extends Component {
           <Route
             path='/'
             component={FilterContainer}
+          />
+          <Route
+            path='/'
+            component={Upload}
           />
 
         </main>
