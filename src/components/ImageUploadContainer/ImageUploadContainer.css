@@ -1,0 +1,9 @@
+.starting-image {
+  max-width: 100%
+}
+
+#images {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}

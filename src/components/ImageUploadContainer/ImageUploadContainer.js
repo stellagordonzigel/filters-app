@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
-import '../Image/Image.css'
+// import '../Image/Image.css'
+import './ImageUploadContainer.css'
 
 class ImageUploadContainer extends Component {
   constructor(props) {
@@ -22,9 +23,6 @@ class ImageUploadContainer extends Component {
     let file = e.target.files[0]
     let reader = new FileReader()
     let imgUrl = reader.readAsDataURL(file)
-    console.log(imgUrl)
-    console.log(this.state)
-
 
     reader.onload = () => {
       this.setState({
@@ -33,6 +31,7 @@ class ImageUploadContainer extends Component {
       console.log(reader.result)
     }
   }
+
 
   componentDidMount() {
     let image = new Image()
@@ -43,41 +42,22 @@ class ImageUploadContainer extends Component {
     canvas.height = image.height
     let ctx = canvas.getContext('2d')
     ctx.drawImage(image, 0, 0)
-    console.log(canvas)
-    console.log(canvas.width)
-    console.log(canvas.height)
   }
 
 
   render() {
-    let {createImage} = this.state
-    console.log(this.state.imgUrl)
-    console.log(this.state)
-    console.log(createImage)
-    let preview = null
-
-    if (createImage) {
-      preview = (<img src={createImage} />)
-    }
-
     return(
       <div>
-        <figure className='starting-image' id="images" alt="test">
-          <img src={this.state.imgUrl} />
+        <figure id="images" alt="test">
+          <img src={this.state.imgUrl} className='starting-image'/>
         </figure>
 
         <div>
           <form onSubmit={this.handleSubmit}>
            <input type="file" onChange={this.handleImageUpload} />
           </form>
-
-          {preview}
         </div>
-
-        <figure className='original' id="images">
-          <canvas ref="canvas" />
-        </figure>
-
+          <canvas ref="canvas" className="starting-image" id="images" />
       </div>
     )
   }
