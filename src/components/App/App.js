@@ -6,10 +6,11 @@ import './App.css';
 
 // import Filter from '../Filter/Filter'
 import FilterContainer from '../FilterContainer/FilterContainer'
-import Image from '../Image/Image'
-// import ShareFacebook from '../ShareFacebook/ShareFacebook'
+// import Image from '../Image/Image'
+import ShareFacebook from '../ShareFacebook/ShareFacebook'
 import Upload from '../Upload/Upload'
 import Header from '../Header/Header'
+import ImageUploadContainer from '../ImageUploadContainer/ImageUploadContainer'
 
 class App extends Component {
   render() {
@@ -20,19 +21,22 @@ class App extends Component {
             path='/'
             component={Header}
           />
-          <Route
+          {/*<Route
             path='/'
             component={Image}
-          />
+          />*/}
           <Route
             path='/'
             component={FilterContainer}
           />
-          <Route
+          {/*<Route
             path='/'
             component={Upload}
+          />*/}
+          <Route
+            path='/'
+            component={ImageUploadContainer}
           />
-
         </main>
       </div>
     );
