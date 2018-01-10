@@ -12,7 +12,6 @@ class ImageUploadContainer extends Component {
       file: '',
       createImage: ''
     }
-    console.log(this.state.imgUrl)
 
     this.handleImageUpload = this.handleImageUpload.bind(this)
   }
@@ -28,14 +27,12 @@ class ImageUploadContainer extends Component {
       this.setState({
         imgUrl: reader.result
       })
-      console.log(reader.result)
     }
   }
 
 
   componentDidMount() {
     let image = new Image()
-    console.log(this.state.imgUrl)
     image.src = this.state.imgUrl
     let canvas = this.refs.canvas
     canvas.width = image.width
@@ -57,7 +54,7 @@ class ImageUploadContainer extends Component {
            <input type="file" onChange={this.handleImageUpload} />
           </form>
         </div>
-          <canvas ref="canvas" className="starting-image" id="images" />
+          <canvas ref="canvas" className="canvas" />
       </div>
     )
   }
