@@ -4,6 +4,9 @@ import $ from 'jquery'
 
 let filters = [
   {
+    name:'Amaro'
+  },
+  {
     name:'Aden'
   },
   {
@@ -59,16 +62,14 @@ class FilterContainer extends Component {
 
   render() {
     let allFilters = this.state.filters.map((filter, index) => {
-      console.log(filter)
       let filterClass = filter.name.toLowerCase()
       return (
-        <div key={index}>
-          <div className='sample-filter-image-container'>
-            <img className={filterClass} src="https://hdwallsource.com/img/2014/5/beach-scenery-18736-19215-hd-wallpapers.jpg"/>
-          </div>
-            <button className='individual-filters' name={filter.name} onClick={e => this.onClickFilter(e)}>
-              {filter.name}
-            </button>
+        <div className='sample-filter-image-container' key={index}>
+          <img className={filterClass} src="https://hdwallsource.com/img/2014/5/beach-scenery-18736-19215-hd-wallpapers.jpg"/>
+
+          <button className='individual-filters' name={filter.name} onClick={e => this.onClickFilter(e)}>
+            {filter.name}
+          </button>
         </div>
       )
     })

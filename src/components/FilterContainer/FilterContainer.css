@@ -5,8 +5,60 @@
 }
 
 .individual-filters{
-  flex-direction: column;
-  border: 1px solid black;
+  width: 100px;
+  background:none;
+  border:none;
+  font-size:12px;
+  padding: 0;
+  margin: 10px
+}
+
+.sample-filter-image-container {
+  width: 100px;
   margin: 10px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.sample-filter-image-container:hover {
+  background-color: #D3D3D3;
+}
+
+.sample-filter-image-container > img {
+  width: 100%;
+}
+
+.amaro:before,
+.amaro:after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  pointer-events: none; }
+
+
+.amaro {
+  position: relative; }
+
+  .amaro img {
+    width: 100%;
+    z-index: 1; }
+
+  .amaro:before {
+    z-index: 2; }
+
+  .amaro:after {
+    z-index: 3; }
+
+
+.amaro {
+  -webkit-filter: hue-rotate(-10deg) contrast(0.9) brightness(1.1) saturate(1.5);
+          filter: hue-rotate(-10deg) contrast(0.9) brightness(1.1) saturate(1.5); }
+
+  .amaro::after {
+    mix-blend-mode: screen; }
