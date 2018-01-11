@@ -5,8 +5,8 @@ class Header extends Component {
   render () {
     return (
       <div className="header-container">
-        <h1>App Name</h1>
-        <p>filters created with <a href="https://github.com/una/CSSgram">CSSGram</a></p>
+        <h1>Pix</h1>
+        <p>Filters created with <a href="https://github.com/una/CSSgram" target="_blank">CSSGram</a></p>
       </div>
     )
   }
