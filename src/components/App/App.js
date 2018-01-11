@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import {
-  Route
+  Route, Redirect
 } from 'react-router-dom'
 import './App.css';
 
-// import Filter from '../Filter/Filter'
 import FilterContainer from '../FilterContainer/FilterContainer'
-// import Image from '../Image/Image'
-import ShareFacebook from '../ShareFacebook/ShareFacebook'
-import Upload from '../Upload/Upload'
 import Header from '../Header/Header'
 import ImageUploadContainer from '../ImageUploadContainer/ImageUploadContainer'
 
@@ -16,26 +12,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <main>
+          <FilterContainer />
+          <ImageUploadContainer />
           <Route
-            path='/'
-            component={Header}
-          />
-          {/*<Route
-            path='/'
-            component={Image}
-          />*/}
-          <Route
-            path='/'
-            component={FilterContainer}
-          />
-          {/*<Route
-            path='/'
-            component={Upload}
-          />*/}
-          <Route
-            path='/'
-            component={ImageUploadContainer}
+            path='/*'
+            render={() => <Redirect to='/' />}
           />
         </main>
       </div>
