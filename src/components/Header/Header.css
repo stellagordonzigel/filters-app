@@ -1,7 +1,16 @@
 h1 {
   font-family: 'Sacramento', cursive;
+  font-size: 40px;
+  padding-top: 10px;
+  margin: 0;
 }
 
 p {
   font-size: 12px;
+  margin-top: -8px;
+  padding-bottom: 10px;
+}
+
+.header-container {
+  background-color: #ffccbc;
 }

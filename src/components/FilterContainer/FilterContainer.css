@@ -1,16 +1,9 @@
-.filter-container{
+.filter-container {
   display: flex;
-  justify-content: center;
-
-}
-
-.individual-filters{
-  width: 100px;
-  background:none;
-  border:none;
-  font-size:12px;
-  padding: 0;
-  margin: 10px
+  width: 800px;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sample-filter-image-container {
@@ -23,13 +16,25 @@
 }
 
 .sample-filter-image-container:hover {
-  background-color: #D3D3D3;
+  /*background-color: #D3D3D3;*/
+  background-color: #cb9b8c;
 }
 
 .sample-filter-image-container > img {
   width: 100%;
 }
 
+.individual-filters{
+  width: 100px;
+  background: none;
+  border: none;
+  font-size: 12px;
+  padding: 0;
+  margin: 10px;
+  outline: 0;
+}
+
+/*AMARO*/
 .amaro:before,
 .amaro:after {
   content: '';

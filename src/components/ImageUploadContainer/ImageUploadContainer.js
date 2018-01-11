@@ -30,7 +30,7 @@ class ImageUploadContainer extends Component {
   render() {
     return(
       <div>
-        <img src={this.state.imgUrl} className='starting-image' id='images'/>
+        <img src={this.state.imgUrl} className='starting-image' id='images' alt='Uploaded photo to be manipulated.'/>
         <form onSubmit={this.handleSubmit}>
           <input type="file" onChange={this.handleImageUpload} />
         </form>

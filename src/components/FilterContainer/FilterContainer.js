@@ -65,7 +65,7 @@ class FilterContainer extends Component {
       let filterClass = filter.name.toLowerCase()
       return (
         <div className='sample-filter-image-container' key={index}>
-          <img className={filterClass} src="https://hdwallsource.com/img/2014/5/beach-scenery-18736-19215-hd-wallpapers.jpg"/>
+          <img className={filterClass} src="https://hdwallsource.com/img/2014/5/beach-scenery-18736-19215-hd-wallpapers.jpg" alt='Filter previews'/>
 
           <button className='individual-filters' name={filter.name} onClick={e => this.onClickFilter(e)}>
             {filter.name}
