@@ -82,6 +82,26 @@
   @include clarendon;
 }
 
+//EARLYBIRD
+@import 'shared';
+
+@mixin earlybird($filters...) {
+  @include filter-base;
+  filter: contrast(.9) sepia(.2) $filters;
+
+  &::after {
+    background: radial-gradient(circle, rgb(208, 186, 142) 20%, rgb(54, 3, 9) 85%, rgb(29, 2, 16) 100%);
+    mix-blend-mode: overlay;
+  }
+
+  @content;
+}
+
+// earlybird Instagram filter
+%earlybird,
+.earlybird {
+  @include earlybird;
+}
 
 //GINGHAM
 @import 'shared';
@@ -184,6 +204,32 @@
 %mayfair,
 .mayfair {
   @include mayfair;
+}
+
+//MOON
+@import 'shared';
+
+@mixin moon($filters...) {
+  @include filter-base;
+  filter: grayscale(1) contrast(1.1) brightness(1.1) $filters;
+
+  &::before {
+    background: rgb(160, 160, 160);
+    mix-blend-mode: soft-light;
+  }
+
+  &::after {
+    background: rgb(56, 56, 56);
+    mix-blend-mode: lighten;
+  }
+
+  @content;
+}
+
+// moon Instagram filter
+%moon,
+.moon {
+  @include moon;
 }
 
 //NASHVILLE

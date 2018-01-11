@@ -19,6 +19,9 @@ let filters = [
     name:'Clarendon'
   },
   {
+    name:'Earlybird'
+  },
+  {
     name:'Gingham'
   },
   {
@@ -32,6 +35,9 @@ let filters = [
   },
   {
     name:'Mayfair'
+  },
+  {
+    name:'Moon'
   },
   {
     name:'Nashville'
