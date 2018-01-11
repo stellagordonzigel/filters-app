@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import './ImageUploadContainer.css'
 
+import SocialShare from '../SocialShare/SocialShare'
+
 class ImageUploadContainer extends Component {
   constructor(props) {
     super(props)
@@ -11,7 +13,6 @@ class ImageUploadContainer extends Component {
 
     this.handleImageUpload = this.handleImageUpload.bind(this)
   }
-
 
   handleImageUpload(e) {
     e.preventDefault()
@@ -30,11 +31,13 @@ class ImageUploadContainer extends Component {
     return(
       <div>
         <img src={this.state.imgUrl} className='starting-image' id='images'/>
-        <div>
-          <form onSubmit={this.handleSubmit}>
-            <input type="file" onChange={this.handleImageUpload} />
-          </form>
-        </div>
+        <form onSubmit={this.handleSubmit}>
+          <input type="file" onChange={this.handleImageUpload} />
+        </form>
+        <br />
+        <SocialShare
+          imgUrl ={this.state.imgUrl}
+        />
       </div>
     )
   }
