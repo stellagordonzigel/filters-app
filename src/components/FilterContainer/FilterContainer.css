@@ -16,8 +16,7 @@
 }
 
 .sample-filter-image-container:hover {
-  /*background-color: #D3D3D3;*/
-  background-color: #cb9b8c;
+  background-color: rgb(245,245,235);
 }
 
 .sample-filter-image-container > img {
