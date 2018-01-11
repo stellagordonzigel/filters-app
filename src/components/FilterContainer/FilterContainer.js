@@ -4,6 +4,9 @@ import $ from 'jquery'
 
 let filters = [
   {
+    name:'Aden'
+  },
+  {
     name:'Brannan'
   },
   {
@@ -16,7 +19,19 @@ let filters = [
     name:'Gingham'
   },
   {
+    name:'Hudson'
+  },
+  {
     name:'Inkwell'
+  },
+  {
+    name:'Lofi'
+  },
+  {
+    name:'Mayfair'
+  },
+  {
+    name:'Nashville'
   }
 ]
 
@@ -44,8 +59,13 @@ class FilterContainer extends Component {
 
   render() {
     let allFilters = this.state.filters.map((filter, index) => {
+      console.log(filter)
+      let filterClass = filter.name.toLowerCase()
       return (
         <div key={index}>
+          <div className='sample-filter-image-container'>
+            <img className={filterClass} src="https://hdwallsource.com/img/2014/5/beach-scenery-18736-19215-hd-wallpapers.jpg"/>
+          </div>
             <button className='individual-filters' name={filter.name} onClick={e => this.onClickFilter(e)}>
               {filter.name}
             </button>
