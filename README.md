@@ -14,6 +14,7 @@
 
 ## Technologies Used:
 * React
+    * [react-share](https://github.com/nygardk/react-share)
 * [CSSgram](https://github.com/una/CSSgram)
 * JavaScript
 * jQuery
@@ -30,6 +31,10 @@
 ## Contribute
 * Source Code: https://github.com/stellagordonzigel/filters-app
 * Issue Tracker: https://github.com/stellagordonzigel/filters-app/issues
+
+
+
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
