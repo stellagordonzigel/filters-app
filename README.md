@@ -8,6 +8,7 @@
 * [View user stories](./public/PixUserStories.pages)
 * [View wireframe](./public/PixWireframe.JPG)
 
+## Application Preview
 ![picture](./public/PixScreenShot.png)
 ![picture](./public/PixFacebookExample.png)
 
@@ -21,6 +22,7 @@
 * Fork this repository
 * Clone it to your local repository
 * Run ```npm install``` in your command line
+* Run ```npm run start``` to view the application in your browser
 
 ## Unsolved Problems:
 * I need to figure out how to save the filtered images so the user can share these edited photos on social media
